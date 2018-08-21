@@ -1,6 +1,6 @@
+let matrix;
 let rows = 3;
 let cols = 3;
-let matrix;
 
 onload = () => {
     matrix = document.getElementById("matrix");

@@ -32,7 +32,7 @@ export class RegisterComponent {
   }
 
   // get all controls
-  get f() {this.registerForm.controls.male.setValue(0);  return this.registerForm.controls; }
+  get f() {this.registerForm.controls.male.setValue(false);  return this.registerForm.controls; }
   
   onSubmit() {
     this.submitted = true;

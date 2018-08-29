@@ -36,10 +36,12 @@
 
           <div class="form-group">
             <label>Male</label>
-            <input type="checkbox" formControlName="male" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.male.errors }"/>
-            <div *ngIf="submitted && f.male.errors" class="invalid-feedback">
-              <div *ngIf="f.male.errors.required">Male is required</div>
-            </div>
+            <input type="checkbox"  class="form-control" formControlName="male"/>
+            <!-- formControlName="male" -->
+            <!-- [ngClass]="{ 'is-invalid': submitted && f.male.errors }" -->
+            <!-- <div *ngIf="submitted && f.male.errors" class="invalid-feedback"> -->
+              <!-- <div *ngIf="f.male.errors.required">Male is required</div> -->
+            <!-- </div> -->
           </div> 
 
 

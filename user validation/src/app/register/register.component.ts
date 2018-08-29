@@ -26,17 +26,19 @@ export class RegisterComponent {
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
       tz: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(9), ValidateTz]],
       age: ['', [Validators.required, ValidateAge]],
-      male: ['', [Validators.required]],
+      male: ['', []],
       country: ['', [Validators.required, ValidateCountry]]
     });
   }
 
   // get all controls
-  get f() { return this.registerForm.controls; }
+  get f() {this.registerForm.controls.male.setValue(0);  return this.registerForm.controls; }
   
   onSubmit() {
     this.submitted = true;
     if (this.registerForm.invalid) {
+     console.log("just bsd");
+      
       return;
     }
     this.user = JSON.parse(JSON.stringify(this.registerForm.value));

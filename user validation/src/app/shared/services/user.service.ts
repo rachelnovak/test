@@ -23,9 +23,10 @@ export class UserService {
     addUser(user: User): void {
         let url: string = this.basicUrl + "/addUser";
         this.httpClient.post<User>(url, user).subscribe(res => {
-            alert("the user added:"+" "+res);
+            console.log(res);
+            alert("the user added: "+JSON.stringify(res));
         }, error => {
-            alert("error:" + error);
+            alert("error:" + JSON.stringify(error));
         })
     }
 

@@ -37,8 +37,6 @@ export class RegisterComponent {
   onSubmit() {
     this.submitted = true;
     if (this.registerForm.invalid) {
-     
-      
       return;
     }
     this.user = JSON.parse(JSON.stringify(this.registerForm.value));

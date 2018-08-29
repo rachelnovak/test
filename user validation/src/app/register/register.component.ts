@@ -37,10 +37,11 @@ export class RegisterComponent {
   onSubmit() {
     this.submitted = true;
     if (this.registerForm.invalid) {
-     console.log("just bsd");
+     
       
       return;
     }
+    console.log("just bsd");
     this.user = JSON.parse(JSON.stringify(this.registerForm.value));
     this.userService.addUser(this.user);
   }

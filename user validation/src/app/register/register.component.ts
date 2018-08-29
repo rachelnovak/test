@@ -41,7 +41,6 @@ export class RegisterComponent {
       
       return;
     }
-    console.log("just bsd");
     this.user = JSON.parse(JSON.stringify(this.registerForm.value));
     this.userService.addUser(this.user);
   }
